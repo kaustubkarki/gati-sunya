@@ -1,0 +1,30 @@
+.map-container {
+  transition: all 0.5s ease; // Smooth transition when resizing the map
+  cursor: pointer;
+}
+
+.map-container.small {
+  width: 500px; // Small default size
+  height: 450px; // Small default size
+}
+
+// .map-container.large {
+//   width: 55vw; // Full-screen width
+//   height: 55vh; // Full-screen height
+//   //   position: fixed; // Fixed positioning for full-screen
+//   top: 0;
+//   left: 0;
+//   z-index: 9999999; // Ensures map is above other content
+// }
+
+// .close-fullscreen-btn {
+//   position: fixed;
+//   top: 10px;
+//   right: 20px;
+//   padding: 10px 20px;
+//   background-color: red;
+//   color: white;
+//   border: none;
+//   cursor: pointer;
+//   z-index: 999999; // Higher than the map for visibility
+// }

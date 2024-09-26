@@ -1,0 +1,116 @@
+@import "./../../resposive.scss";
+
+.searchBar {
+  .type {
+    button {
+      padding: 16px 36px;
+      border: 1px solid #999;
+      border-bottom: none;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      text-transform: capitalize;
+      gap: 5px;
+      &.active {
+        background-color: #fece51;
+        color: white;
+      }
+
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-right: none;
+      }
+      &:last-child {
+        border-top-right-radius: 5px;
+        border-left: none;
+      }
+    }
+  }
+
+  form {
+    border: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    gap: 5px;
+
+    @include sm {
+      flex-direction: column;
+      border: none;
+    }
+
+    @include md {
+      border: none;
+      height: 46px;
+    }
+    input {
+      border: none;
+      padding: 0px 10px;
+      width: 200px;
+      &:valid {
+        background-color: #fece51;
+      }
+
+      @include lg {
+        padding: 0px 5px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 140px;
+        }
+      }
+      @include md {
+        border-radius: 7px;
+
+        width: 200px;
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 200px;
+        }
+      }
+
+      @include sm {
+        width: auto;
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: auto;
+        }
+        gap: 2px;
+        padding: 20px;
+        border: 1px solid #999;
+      }
+    }
+
+    a {
+      background-color: #fece51;
+      flex: 2;
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+      padding: auto;
+
+      button {
+        border: #fff;
+        cursor: pointer;
+        background-color: #fece51;
+        // border-radius: 7px;
+
+        @include sm {
+          padding: 10px;
+          border-radius: 7px;
+          // margin-top: 3rem;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      @include md {
+        margin-top: 2px;
+        border-radius: 7px;
+      }
+    }
+  }
+}
